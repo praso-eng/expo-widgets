@@ -148,7 +148,7 @@ const copyFilesToWidgetProject = (widgetFolderPath: string, targetPath: string) 
   }
 
   fsExtra.copySync(widgetFolderPath, targetPath, {
-    filter: (name) => {
+    filter: (name: string) => {
       const fileName = path.basename(name)
       if (name.endsWith('Module.swift') || fileName.startsWith('.')) {
         return false
